@@ -1,6 +1,9 @@
 #!C:\strawberry\perl\bin -w
 
 
+#Telemetry limit request via STOMP
+#this is assuming the STOMP transport connector is configured
+
 use Net::Stomp;
 use strict;
 use Data::Dumper;
@@ -8,8 +11,7 @@ use Data::Dumper;
 
 print "calling Stomp lib ..\n";
 
-# Or in a more natural perl way
- my $stomp = Net::Stomp->new({ hosts => [
+my $stomp = Net::Stomp->new({ hosts => [
            { hostname => 'localhost', port => 61613 },
            { hostname => 'localhost', port => 61613 },
          ] });
@@ -30,10 +32,12 @@ my %head;
 $head{'destination'}='/queue/telemetry';
 $head{"reply-to"}='/temp-queue/tqlimit';
 
+#create the telemetry xml
 my $telemetry = <<TELEMETRY;
 <telemetry sv="3" mnemonic="a" value="b" />
 
 TELEMETRY
+
 
 my $frame1 = Net::Stomp::Frame->new(
 	  {  command => "SEND",
