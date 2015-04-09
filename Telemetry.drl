@@ -1,0 +1,18 @@
+package rtsw.toolsteam.rules
+
+import rtsw.toolsteam.bootdrools.domain.*;
+
+
+rule "InLimits"
+    when
+        t : Telemetry( mnemonic == "a", value == "b" )
+    then
+    insertLogical( new InLimits(t) );
+end
+
+rule "OutOfLimits"
+    when
+        t : Telemetry( mnemonic == "b", value == "a" )
+    then
+    insertLogical( new OutOfLimits(t) );
+end
