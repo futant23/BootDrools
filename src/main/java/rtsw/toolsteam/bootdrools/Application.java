@@ -41,9 +41,7 @@ public class Application {
     
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
-        
-//        Telemetry t =new Telemetry("sv003", "a", "b");
-//        System.out.println(new TelemetryTransformer().toXml(t));
+
     }
   
     @Bean
