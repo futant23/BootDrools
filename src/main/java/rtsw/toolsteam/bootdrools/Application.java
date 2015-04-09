@@ -51,6 +51,9 @@ public class Application {
             log.error(results.getMessages().toString());
             throw new IllegalStateException("Errors detected while building: "+rule);
         }
+        else {
+            log.info("no errors detected from: "+rule);
+        }
         
         KieContainer kieContainer =services.newKieContainer(services.getRepository().getDefaultReleaseId());
         return kieContainer;
