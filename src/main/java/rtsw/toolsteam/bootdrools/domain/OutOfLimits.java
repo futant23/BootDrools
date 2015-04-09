@@ -5,11 +5,18 @@
  */
 package rtsw.toolsteam.bootdrools.domain;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
 /**
  *
  * @author b1050502
  */
+@XmlRootElement
 public class OutOfLimits extends Limit{
+
+    public OutOfLimits() { }
+    
+    
    public OutOfLimits(Telemetry tlm) {
         super(tlm);
     }

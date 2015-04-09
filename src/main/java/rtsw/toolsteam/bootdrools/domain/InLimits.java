@@ -5,12 +5,16 @@
  */
 package rtsw.toolsteam.bootdrools.domain;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
 /**
  *
  * @author b1050502
  */
+@XmlRootElement
 public class InLimits extends Limit{
     
+    public InLimits(){}
     public InLimits(Telemetry tlm) {
         super(tlm);
     }

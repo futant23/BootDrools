@@ -39,7 +39,7 @@ public class TelemetryService {
         log.info("initializing a new telemetry session ...");
     }
 
-    public Limit getLimits(Telemetry telemetry) {
+    public synchronized Limit getLimits(Telemetry telemetry) {
         log.info("getting limits for: " + telemetry);
         KieSession kieSession = kieContainer.newKieSession();
         kieSession.insert(telemetry);

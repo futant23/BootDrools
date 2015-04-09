@@ -5,13 +5,26 @@
  */
 package rtsw.toolsteam.bootdrools.domain;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlRootElement;
+
 /**
  *
  * @author b1050502
  */
+@XmlRootElement(name ="telemetry")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Telemetry {
+    
+    @XmlAttribute
     private String sv;
+    
+    @XmlAttribute
     private String mnemonic;
+    
+    @XmlAttribute
     private String value;
 
     public Telemetry() {}
@@ -22,7 +35,6 @@ public class Telemetry {
         this.mnemonic = mnemonic;
         this.value = value;
     }
-    
     
     public String getSv() {
         return sv;

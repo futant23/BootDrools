@@ -5,10 +5,15 @@
  */
 package rtsw.toolsteam.bootdrools.domain;
 
+import javax.xml.bind.annotation.XmlSeeAlso;
+import javax.xml.bind.annotation.XmlTransient;
+
 /**
  *
  * @author b1050502
  */
+@XmlTransient
+@XmlSeeAlso({InLimits.class, OutOfLimits.class, NoLimitsFound.class})
 public abstract class Limit {
     protected Telemetry telemetry;
 
