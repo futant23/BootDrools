@@ -46,6 +46,8 @@ public class Application {
     @Bean
     public KieContainer getKieContainer() throws FileNotFoundException{
         log.info("loading rule from: " +rule);
+       
+        
         KieServices services =KieServices.Factory.get();
         KieFileSystem fileSystem =services.newKieFileSystem();
         
