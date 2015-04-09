@@ -15,7 +15,7 @@ import rtsw.toolsteam.bootdrools.services.TelemetryService;
 
 /**
  *
- * @author b1050502
+ * @author 
  */
 @Component
 public class TelemetryRoute extends RouteBuilder{

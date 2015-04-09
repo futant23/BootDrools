@@ -9,7 +9,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author b1050502
+ * @author 
  */
 @XmlRootElement
 public class InLimits extends Limit{

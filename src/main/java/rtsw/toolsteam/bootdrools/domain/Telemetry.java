@@ -12,7 +12,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author b1050502
+ * @author 
  */
 @XmlRootElement(name ="telemetry")
 @XmlAccessorType(XmlAccessType.FIELD)

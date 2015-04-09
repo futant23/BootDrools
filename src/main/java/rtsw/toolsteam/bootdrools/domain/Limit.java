@@ -10,7 +10,7 @@ import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
- * @author b1050502
+ * @author 
  */
 @XmlTransient
 @XmlSeeAlso({InLimits.class, OutOfLimits.class, NoLimitsFound.class})

@@ -18,7 +18,7 @@ import rtsw.toolsteam.bootdrools.domain.Telemetry;
 
 /**
  *
- * @author b1050502
+ * @author 
  */
 @RestController
 public class TelemetryController {
