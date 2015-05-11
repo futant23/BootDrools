@@ -32,6 +32,13 @@ public class TelemetryController {
         this.telemetryService = telemetryService;
     }
 
+    /**
+     * http://localhost:8080/api/telemetry?sv=03&mnemonic=a&value=b
+     * @param sv
+     * @param mnemonic
+     * @param value
+     * @return 
+     */
     @RequestMapping(value = "/telemetry", method = RequestMethod.GET)
     public Limit getLimit(@RequestParam(required = true) String sv,
             @RequestParam(required = true) String mnemonic,
